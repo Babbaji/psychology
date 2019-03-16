@@ -1,0 +1,484 @@
+<form #bigFiveAnswers="ngForm" (ngSubmit)="onSubmit(bigFiveAnswers)">
+
+
+  <div class="d-flex w-100 justify-content-center">
+    <div class="d-flex flex-column">
+
+      <span class="badge badge-dark">Creativo</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="creativo" [(ngModel)]="creativo">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Fantasioso</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="fantasioso" [(ngModel)]="fantasioso">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Originale</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="originale" [(ngModel)]="originale">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Preciso</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="preciso" [(ngModel)]="preciso">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Ordinato</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="ordinato" [(ngModel)]="ordinato">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Diligente</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="diligente" [(ngModel)]="diligente">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Estroverso</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="estroverso" [(ngModel)]="estroverso">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Espansivo</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="espansivo" [(ngModel)]="espansivo">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Chiuso</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="chiuso" [(ngModel)]="chiuso">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Altruista</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="altruista" [(ngModel)]="altruista">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Disponibile</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="disponibile" [(ngModel)]="disponibile">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Generoso</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="generoso" [(ngModel)]="generoso">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Emotivo</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="emotivo" [(ngModel)]="emotivo">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Ansioso</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="ansioso" [(ngModel)]="ansioso">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+
+      <span class="badge badge-dark">Nervoso</span>
+      <div class="p-2">
+        <span class="badge badge-danger mr-3">Disapprovo</span>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup name="nervoso" [(ngModel)]="nervoso">
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="1"> 1
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="2"> 2
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="3"> 3
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="4"> 4
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="5"> 5
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="6"> 6
+          </label>
+          <label ngbButtonLabel class="btn-outline-info">
+            <input ngbButton type="radio" [value]="7"> 7
+          </label>
+        </div>
+        <span class="badge badge-success ml-3">Approvo</span>
+      </div>
+
+      <hr class="w-100">
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="!bigFiveAnswers.form.valid">
+      Register
+    </button>
+  </div>
+
+  <div>
+    {{bigFiveAnswers.value | json}}
+  </div>
+
+</form>

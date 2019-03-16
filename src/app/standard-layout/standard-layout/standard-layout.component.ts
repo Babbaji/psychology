@@ -47,15 +47,10 @@ export class StandardLayoutComponent implements OnInit {
 
   closeMenu() {
     this.isMenuOpen = false;
-    console.log('closeMenu');
   }
   openMenu() {
     setTimeout(() => {
       this.isMenuOpen = true;
     });
-    console.log('openMenu');
-  }
-  log(any) {
-    console.log(any);
   }
 }

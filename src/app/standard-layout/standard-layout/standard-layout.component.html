@@ -14,15 +14,19 @@
   <router-outlet #o="outlet" (activate)="closeMenu()" ></router-outlet>
 </div>-->
 <div id="perspective" class="perspective effect-laydown" [ngClass]="isMenuOpen ? 'modalview animate' : ''">
-  <div class="contenitore"  (click)="isMenuOpen ? closeMenu() : log('open')" >
+  <div class="contenitore" (click)="isMenuOpen ? closeMenu() : undefined">
     <div class="wrapper"><!-- wrapper needed for scroll -->
       <app-top-bar (openMenuEmitter)="openMenu()"></app-top-bar>
-      <router-outlet></router-outlet>
+      <div class="p-5">
+        <router-outlet></router-outlet>
+      </div>
     </div><!-- wrapper -->
   </div><!-- /container -->
-  <nav class="outer-nav top vertical">
-    <a class="btn btn-info" [routerLink]="''" (click)="closeMenu()"><i class="fa fa-bars"></i> Home</a>
-    <a class="btn btn-info" [routerLink]="'/tests'" (click)="closeMenu()"><i class="fa fa-bars"></i> Tests</a>
-    <a class="btn btn-info" [routerLink]="'/results'" (click)="closeMenu()"><i class="fa fa-bars"></i> Results</a>
-  </nav>
+  <div class="d-flex w-100 justify-content-center" *ngIf="isMenuOpen">
+    <nav class="outer-nav top">
+      <a class="btn btn-info" [routerLink]="''" (click)="closeMenu()"><i class="fa fa-bars"></i> Home</a>
+      <a class="btn btn-info" [routerLink]="'/tests'" (click)="closeMenu()"><i class="fa fa-bars"></i> Tests</a>
+      <a class="btn btn-info" [routerLink]="'/results'" (click)="closeMenu()"><i class="fa fa-bars"></i> Results</a>
+    </nav>
+  </div>
 </div><!-- /perspective -->
