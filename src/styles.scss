@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-primario {
+  background-color: #7dc2ad !important;
+}
+.bg-secondario {
+  background-color: #40b3a2 !important;
+}
+.bg-terziario {
+  background-color: #85cdca !important;
+}
+.bg-quarta {
+  background-color: #e8a87c !important;
+}
+.bg-quinto {
+  background-color: #e27d5f !important;
+}
+
+.hover-scale:hover {
+  transform: scale(1.3);
+}
