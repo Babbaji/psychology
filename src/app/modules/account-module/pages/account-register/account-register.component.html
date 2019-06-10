@@ -1,0 +1,85 @@
+<div class="d-flex flex-row w-100 justify-content-center ">
+  <div class="bg-light p-4">
+    <form>
+      <div class="mb-5">
+        <div class="alert alert-info">
+          In questo momento stai usufruendo del sito senza essere registrato, <br>
+          grazie a questo semplice form puoi registare i tuoi dati
+          e quindi usufruire della sezione di monitoraggio personale.
+        </div>
+      </div>
+      <div class="mb-5">
+        <p class="font-weight-bold">Informazioni Statistiche:</p>
+        <small>(Queste informazioni servono solo ai fini statistici)</small>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label>Età</label>
+            <input type="number" class="form-control" placeholder="Età">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Nazionalità</label>
+            <select name="nazionalità" class="form-control">
+              <option value="none">Select below</option>
+              <option value="European">European</option>
+              <option value="Italian">Italian</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <label>Sesso</label>
+          </div>
+          <div class="btn-group btn-group-toggle" ngbRadioGroup name="sesso">
+            <label ngbButtonLabel class="btn-outline-info">
+              <input ngbButton type="radio" [value]="'M'"> M
+            </label>
+            <label ngbButtonLabel class="btn-outline-info">
+              <input ngbButton type="radio" [value]="'F'"> F
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="my-5">
+        <p class="font-weight-bold">Informazioni Account:</p>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" placeholder="Username">
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" placeholder="Password">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" placeholder="Ripeti Password">
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" placeholder="Email">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-info">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

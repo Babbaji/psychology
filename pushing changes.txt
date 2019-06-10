@@ -1,0 +1,5 @@
+git add *
+git commit
+git push
+ng build --prod --base-href "https://babbaji.github.io/TheWorldRpg/"
+ngh --dir dist/TheWorldRpg

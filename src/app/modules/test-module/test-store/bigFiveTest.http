@@ -1,0 +1,31 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+POST https://webhooks.mongodb-stitch.com/api/client/v2.0/app/psychologydashboard-xffyl/service/bigFiveTest/incoming_webhook/bigFiveTest
+Content-Type: application/json
+
+{
+  "_idUser": {
+    "$oid": "5cbef44a3b8f817136cedea7"
+  },
+  "creativo": 4,
+  "fantasioso": 2,
+  "originale": 3,
+  "preciso": 2,
+  "ordinato": 1,
+  "diligente": 2,
+  "estroverso": 1,
+  "espansivo": 1,
+  "chiuso": 4,
+  "altruista": 1,
+  "disponibile": 9,
+  "generoso": 3,
+  "emotivo": 2,
+  "ansioso": 3,
+  "nervoso": 4
+}
+
+###
