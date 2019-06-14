@@ -1,57 +1,21 @@
 export class BasicLayoutRoutes {
-  public static get BASE() {
-    return '';
-  }
-
-  public static get TESTMODULE() {
-    return 'tests';
-  }
-
-  public static get TESTMODULEPATH() {
-    return '/tests';
-  }
-
-  public static get ACCOUNTMODULE() {
-    return 'account';
-  }
-
-  public static get ACCOUNTMODULEPATH() {
-    return '/account';
-  }
-
-  public static get HOME() {
-    return 'home';
-  }
-
-  public static get HOMEPATH() {
-    return BasicLayoutRoutes.BASE + '/' + this.HOME;
-  }
+  public static readonly BASE = '';
+  public static readonly TESTMODULE = 'tests';
+  public static readonly TESTMODULEPATH = '/tests';
+  public static readonly ACCOUNTMODULE = 'account';
+  public static readonly ACCOUNTMODULEPATH = '/account';
+  public static readonly HOME = 'home';
+  public static readonly HOMEPATH = BasicLayoutRoutes.BASE + '/' + BasicLayoutRoutes.HOME;
 }
 
 export class TestRoutes {
-  public static get LIST() {
-    return 'list';
-  }
-
-  public static get LISTPATH() {
-    return BasicLayoutRoutes.TESTMODULEPATH + '/' + this.LIST;
-  }
-
-  public static get BIGFIVE() {
-    return 'bigfive';
-  }
-
-  public static get BIGFIVEPATH() {
-    return BasicLayoutRoutes.TESTMODULEPATH + '/' + this.BIGFIVE;
-  }
+  public static readonly LIST = 'list';
+  public static readonly LISTPATH = BasicLayoutRoutes.TESTMODULEPATH + '/' + TestRoutes.LIST;
+  public static readonly BIGFIVE = 'bigfive';
+  public static readonly BIGFIVEPATH = BasicLayoutRoutes.TESTMODULEPATH + '/' + TestRoutes.BIGFIVE;
 }
 
 export class AccountRoutes {
-  public static get LOGIN() {
-    return 'login';
-  }
-
-  public static get LOGINPATH() {
-    return BasicLayoutRoutes.ACCOUNTMODULEPATH + '/' + this.LOGIN;
-  }
+  public static readonly LOGIN = 'login';
+  public static readonly LOGINPATH = BasicLayoutRoutes.ACCOUNTMODULEPATH + '/' + AccountRoutes.LOGIN;
 }

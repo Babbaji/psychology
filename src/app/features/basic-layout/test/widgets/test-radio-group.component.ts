@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-test-radio-group',
@@ -14,6 +14,10 @@ import {FormGroup} from '@angular/forms';
           </label>
         </ng-container>
       </div>
+      <div *ngIf="control.touched && control.invalid"
+        class="alert alert-danger w-50 mx-auto mt-1" role="alert">
+        Non hai selezionato un valore per {{capitalize(property)}}!
+      </div>
       <!--<span class="badge badge-success ml-1">Approvo</span>-->
     </div>
   `,
@@ -21,11 +25,11 @@ import {FormGroup} from '@angular/forms';
 })
 export class TestRadioGroupComponent implements OnInit {
 
+  @Input() control: FormControl;
   @Input() parentForm: FormGroup;
   @Input() property: string;
   @Input() count: number;
   items: Array<number>;
-
   constructor() {
   }
 

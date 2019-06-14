@@ -4,14 +4,14 @@ import {CORE_SERVICES} from './core.index';
 import {NgxsModule} from '@ngxs/store';
 import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import {NgxsRouterPluginModule} from '@ngxs/router-plugin';
-import {CORE_STATES} from './ngxs/ngxs.index';
+import {CORE_STATES, EVENTS_STATES} from './ngxs/ngxs.index';
 import {NgxsFormPluginModule} from '@ngxs/form-plugin';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    NgxsModule.forRoot([...CORE_STATES]),
+    NgxsModule.forRoot([...CORE_STATES, ...EVENTS_STATES]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsRouterPluginModule.forRoot(),
     NgxsFormPluginModule.forRoot(),

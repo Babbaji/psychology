@@ -1,5 +1,6 @@
 git add *
 git commit
 git push
-ng build --prod --base-href "https://babbaji.github.io/TheWorldRpg/"
-ngh --dir dist/TheWorldRpg
+ng build --prod --base-href "https://babbaji.github.io/psychology/"
+ngh --dir=dist/psychology
+npx ngh --dir=dist/Psychology

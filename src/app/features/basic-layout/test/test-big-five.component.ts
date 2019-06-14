@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {Store} from '@ngxs/store';
+import {AidToBigFive} from '../../../core/ngxs/user/user.action';
 
 @Component({
   selector: 'app-test-big-five',
@@ -14,7 +16,11 @@ import {FormBuilder, FormGroup} from '@angular/forms';
       <div class="d-flex w-100 justify-content-center">
         <div class="d-flex flex-column w-50 text-center">
           <ng-container *ngFor="let control of formControls">
-            <app-test-radio-group [parentForm]="bigFiveForm" [property]="control" [count]="7"></app-test-radio-group>
+            <app-test-radio-group
+              [control]="bigFiveForm.get(control)"
+              [parentForm]="bigFiveForm"
+              [property]="control"
+              [count]="7"></app-test-radio-group>
             <hr class="w-100 my-4">
           </ng-container>
         </div>
@@ -31,27 +37,27 @@ export class TestBigFiveComponent implements OnInit {
   bigFiveForm: FormGroup;
   formControls: Array<string> = [];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private store: Store) {
     this.setupForm();
   }
 
   setupForm() {
     this.bigFiveForm = this.formBuilder.group({
-      creativo: [null],
-      fantasioso: [null],
-      originale: [null],
-      preciso: [null],
-      ordinato: [null],
-      diligente: [null],
-      estroverso: [null],
-      espansivo: [null],
-      chiuso: [null],
-      altruista: [null],
-      disponibile: [null],
-      generoso: [null],
-      emotivo: [null],
-      ansioso: [null],
-      nervoso: [null]
+      creativo: [null, Validators.required],
+      fantasioso: [null, Validators.required],
+      originale: [null, Validators.required],
+      preciso: [null, Validators.required],
+      ordinato: [null, Validators.required],
+      diligente: [null, Validators.required],
+      estroverso: [null, Validators.required],
+      espansivo: [null, Validators.required],
+      chiuso: [null, Validators.required],
+      altruista: [null, Validators.required],
+      disponibile: [null, Validators.required],
+      generoso: [null, Validators.required],
+      emotivo: [null, Validators.required],
+      ansioso: [null, Validators.required],
+      nervoso: [null, Validators.required]
     });
     Object.keys(this.bigFiveForm.controls).forEach(key => {
       this.formControls.push(key.toString());
@@ -59,9 +65,24 @@ export class TestBigFiveComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.bigFiveForm.value);
+    this.validateAllFormFields(this.bigFiveForm);
+    if (this.bigFiveForm.valid) {
+      this.bigFiveForm.disable();
+      this.store.dispatch(new AidToBigFive());
+    }
   }
 
   ngOnInit() {
+  }
+
+  validateAllFormFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(field => {
+      const control = formGroup.get(field);
+      if (control instanceof FormControl) {
+        control.markAsTouched({onlySelf: true});
+      } else if (control instanceof FormGroup) {
+        this.validateAllFormFields(control);
+      }
+    });
   }
 }

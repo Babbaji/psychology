@@ -1,10 +1,13 @@
-export interface IdUser {
-  $oid: string;
-}
+import {Id} from '../../user/user-models/shared.model';
 
-export interface BigFiveSaveObject {
-  _idUser: IdUser;
-  bigFive: BigFiveForm;
+export interface BigFiveFormStateModel {
+  bigFiveForm: {
+    model: BigFiveForm;
+    dirty: boolean;
+    status: string;
+    errors: any;
+  };
+  lastInsertedTest: Id;
 }
 
 export interface BigFiveForm {
@@ -28,13 +31,4 @@ export interface BigFiveForm {
   ansioso: number;
   nervoso: number;
 
-}
-
-export interface BigFiveFormStateModel {
-  bigFiveForm: {
-    model: BigFiveForm[];
-    dirty: boolean;
-    status: string;
-    errors: any;
-  };
 }
