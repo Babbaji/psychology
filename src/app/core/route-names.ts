@@ -18,4 +18,6 @@ export class TestRoutes {
 export class AccountRoutes {
   public static readonly LOGIN = 'login';
   public static readonly LOGINPATH = BasicLayoutRoutes.ACCOUNTMODULEPATH + '/' + AccountRoutes.LOGIN;
+  public static readonly REGISTER = 'register';
+  public static readonly REGISTERPATH = BasicLayoutRoutes.ACCOUNTMODULEPATH + '/' + AccountRoutes.REGISTER;
 }

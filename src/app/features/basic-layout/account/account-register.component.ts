@@ -1,9 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {AccountRoutes} from '../../../core/route-names';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-account-register',
   template: `
     <div class="d-flex justify-content-center">
       <div class="card w-50 shadow-lg">
@@ -11,7 +10,7 @@ import {AccountRoutes} from '../../../core/route-names';
           <h2>Login</h2>
         </div>
         <div class="card-body">
-          <form class="mt-1 d-flex justify-content-center" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <form class="mt-1 d-flex justify-content-center" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="w-75">
               <div class="form-group">
                 <label for="account">Account</label>
@@ -24,6 +23,11 @@ import {AccountRoutes} from '../../../core/route-names';
                 <input type="password" class="form-control" placeholder="Enter Password"
                        id="password" formControlName="password" name="password">
               </div>
+              <div class="form-group">
+                <label for="repeatPassword">Repeat Password</label>
+                <input type="password" class="form-control" placeholder="Repeat Password"
+                       id="repeatPassword" formControlName="repeatPassword" name="repeatPassword">
+              </div>
               <div class="d-flex w-100 justify-content-center">
                 <div class="d-flex flex-column w-25">
                   <button class="btn btn-info" type="submit"> Submit</button>
@@ -32,15 +36,19 @@ import {AccountRoutes} from '../../../core/route-names';
             </div>
           </form>
         </div>
-        <div class="card-footer h-25"><a [routerLink]="urlRegister">Register</a></div>
+        <div class="card-footer h-25">
+          <i>Through registration you can keep track of your tests. 
+          <br>Adding information about your age, nationality and gender you're helping statistical psychological research,
+          <br>by no means it'll be used to identify you.</i>
+        </div>
       </div>
     </div>
   `,
   styles: []
 })
-export class AccountLoginComponent implements OnInit {
-  urlRegister = AccountRoutes.REGISTERPATH;
-  loginForm: FormGroup;
+export class AccountRegisterComponent implements OnInit {
+
+  registerForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
     this.setupForm();
@@ -51,14 +59,15 @@ export class AccountLoginComponent implements OnInit {
   }
 
   setupForm() {
-    this.loginForm = this.formBuilder.group({
+    this.registerForm = this.formBuilder.group({
       account: [null],
-      password: [null]
+      password: [null],
+      repeatPassword: [null],
     });
   }
 
   onSubmit() {
-    console.log(this.loginForm.value);
+    console.log(this.registerForm.value);
   }
 
 }
