@@ -2,5 +2,5 @@ git add *
 git commit
 git push
 ng build --prod --base-href "https://babbaji.github.io/psychology/"
-ngh --dir=dist/psychology
+npm i angular-cli-ghpages
 npx ngh --dir=dist/Psychology
