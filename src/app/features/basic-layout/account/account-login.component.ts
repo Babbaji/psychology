@@ -6,13 +6,13 @@ import {AccountRoutes} from '../../../core/route-names';
   selector: 'app-login',
   template: `
     <div class="d-flex justify-content-center">
-      <div class="card w-50 shadow-lg">
+      <div class="card shadow-lg">
         <div class="card-header text-center">
           <h2>Login</h2>
         </div>
         <div class="card-body">
           <form class="mt-1 d-flex justify-content-center" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <div class="w-75">
+            <div class="">
               <div class="form-group">
                 <label for="account">Account</label>
                 <input type="text" class="form-control" placeholder="Enter Account"
@@ -25,7 +25,7 @@ import {AccountRoutes} from '../../../core/route-names';
                        id="password" formControlName="password" name="password">
               </div>
               <div class="d-flex w-100 justify-content-center">
-                <div class="d-flex flex-column w-25">
+                <div class="d-flex flex-column">
                   <button class="btn btn-info" type="submit"> Submit</button>
                 </div>
               </div>

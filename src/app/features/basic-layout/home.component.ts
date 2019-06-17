@@ -5,7 +5,7 @@ import {TestRoutes} from '../../core/route-names';
   selector: 'app-home',
   template: `
     <div class="d-flex justify-content-center">
-      <div class="card w-50 shadow-lg">
+      <div class="card shadow-lg">
         <div class="card-header">
           <h2>Benvenuto</h2>
         </div>

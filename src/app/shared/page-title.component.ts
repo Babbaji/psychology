@@ -3,8 +3,8 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-page-title',
   template: `
-    <div class="w-100 d-flex justify-content-center">
-      <div class="alert alert-secondary w-75" role="alert">
+    <div class="d-flex justify-content-center">
+      <div class="alert alert-secondary w-100" role="alert">
         <h3 class="text-center">
           {{title}}
         </h3>
