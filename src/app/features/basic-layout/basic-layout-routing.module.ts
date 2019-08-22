@@ -7,23 +7,23 @@ import {HomeComponent} from './home.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: BasicLayoutRoutes.HOME,
+    redirectTo: BasicLayoutRoutes.path.home,
     pathMatch: 'full'
   },
   {
-    path: BasicLayoutRoutes.BASE,
+    path: BasicLayoutRoutes.path.base,
     component: BasicLayoutComponent,
     children: [
       {
-        path: BasicLayoutRoutes.HOME,
+        path: BasicLayoutRoutes.path.home,
         component: HomeComponent
       },
       {
-        path: BasicLayoutRoutes.TESTMODULE,
+        path: BasicLayoutRoutes.path.testModule,
         loadChildren: './test/test.module#TestModule'
       },
       {
-        path: BasicLayoutRoutes.ACCOUNTMODULE,
+        path: BasicLayoutRoutes.path.accountModule,
         loadChildren: './account/account.module#AccountModule'
       }
     ]

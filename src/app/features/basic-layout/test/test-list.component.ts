@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TestRoutes} from '../../../core/route-names';
+import {Test} from 'tslint';
 
 @Component({
   selector: 'app-test-list',
@@ -37,7 +38,7 @@ export class TestListComponent implements OnInit {
         'It is based on common language descriptors. When factor analysis (a statistical technique) ' +
         'is applied to personality survey data, some words used to describe aspects of personality ' +
         'are often applied to the same person.',
-      link: TestRoutes.BIGFIVEPATH,
+      link: TestRoutes.fullPath('bigFive'),
       buttonText: 'Go To Big Five Test'
     }
   ];

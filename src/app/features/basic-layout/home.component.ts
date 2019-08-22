@@ -32,7 +32,7 @@ import {TestRoutes} from '../../core/route-names';
 })
 export class HomeComponent implements OnInit {
 
-  urlTests = TestRoutes.LISTPATH;
+  urlTests = TestRoutes.fullPath('list');
 
   constructor() {
   }

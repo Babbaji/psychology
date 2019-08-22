@@ -7,15 +7,15 @@ import {TestBigFiveComponent} from './test-big-five.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: TestRoutes.LIST,
+    redirectTo: TestRoutes.path.list,
     pathMatch: 'full'
   },
   {
-    path: TestRoutes.LIST,
+    path: TestRoutes.path.list,
     component: TestListComponent
   },
   {
-    path: TestRoutes.BIGFIVE,
+    path: TestRoutes.path.bigFive,
     component: TestBigFiveComponent
   }
 ];

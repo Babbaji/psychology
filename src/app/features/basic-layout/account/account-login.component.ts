@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {AccountRoutes} from '../../../core/route-names';
+import {Store} from '@ngxs/store';
+import {SaveBigFiveForm} from '../../../core/ngxs/big-five-form/big-five-form.action';
 
 @Component({
   selector: 'app-login',
@@ -39,10 +41,10 @@ import {AccountRoutes} from '../../../core/route-names';
   styles: []
 })
 export class AccountLoginComponent implements OnInit {
-  urlRegister = AccountRoutes.REGISTERPATH;
+  urlRegister = AccountRoutes.fullPath('register');
   loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private store: Store) {
     this.setupForm();
 
   }
@@ -58,7 +60,7 @@ export class AccountLoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.loginForm.value);
+    this.store.dispatch(new SaveBigFiveForm())
   }
 
 }

@@ -25,8 +25,8 @@ import {SaveBigFiveForm} from '../big-five-form/big-five-form.action';
 @State<UserStateModel>({
   name: 'user',
   defaults: {
-    _id: undefined,
-    user: undefined,
+    _id: null,
+    user: null,
   }
 })
 

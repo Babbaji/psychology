@@ -66,8 +66,8 @@ import {BasicLayoutRoutes} from '../../core/route-names';
 })
 export class BasicLayoutComponent implements OnInit {
   isMenuOpen = false;
-  urlTest = BasicLayoutRoutes.TESTMODULEPATH;
-  urlHome = BasicLayoutRoutes.BASE;
+  urlTest = BasicLayoutRoutes.fullPath('testModule');
+  urlHome = BasicLayoutRoutes.path.base;
 
   constructor() {
   }

@@ -1,23 +1,50 @@
+import {Test} from 'tslint';
+
 export class BasicLayoutRoutes {
-  public static readonly BASE = '';
-  public static readonly TESTMODULE = 'tests';
-  public static readonly TESTMODULEPATH = '/tests';
-  public static readonly ACCOUNTMODULE = 'account';
-  public static readonly ACCOUNTMODULEPATH = '/account';
-  public static readonly HOME = 'home';
-  public static readonly HOMEPATH = BasicLayoutRoutes.BASE + '/' + BasicLayoutRoutes.HOME;
+  private static readonly BASE = '';
+  private static readonly HOME = 'home';
+  private static readonly TESTMODULE = 'tests';
+  private static readonly ACCOUNTMODULE = 'account';
+
+  public static readonly path = {
+    home: BasicLayoutRoutes.HOME,
+    base: BasicLayoutRoutes.BASE,
+    testModule: BasicLayoutRoutes.TESTMODULE,
+    accountModule: BasicLayoutRoutes.ACCOUNTMODULE,
+  };
+
+  public static fullPath(key: 'home' | 'base' | 'testModule' | 'accountModule') {
+    return BasicLayoutRoutes.path.base + '/' + this.path[key];
+  }
 }
 
+export type TestType = 'list' | 'bigFive';
 export class TestRoutes {
-  public static readonly LIST = 'list';
-  public static readonly LISTPATH = BasicLayoutRoutes.TESTMODULEPATH + '/' + TestRoutes.LIST;
-  public static readonly BIGFIVE = 'bigfive';
-  public static readonly BIGFIVEPATH = BasicLayoutRoutes.TESTMODULEPATH + '/' + TestRoutes.BIGFIVE;
+  private static readonly LIST = 'list';
+  private static readonly BIGFIVE = 'bigfive';
+
+  public static path = {
+    list: TestRoutes.LIST,
+    bigFive: TestRoutes.BIGFIVE
+  };
+
+  public static fullPath(key: TestType) {
+    return BasicLayoutRoutes.fullPath('testModule') + '/' + this.path[key];
+  }
 }
+
 
 export class AccountRoutes {
-  public static readonly LOGIN = 'login';
-  public static readonly LOGINPATH = BasicLayoutRoutes.ACCOUNTMODULEPATH + '/' + AccountRoutes.LOGIN;
-  public static readonly REGISTER = 'register';
-  public static readonly REGISTERPATH = BasicLayoutRoutes.ACCOUNTMODULEPATH + '/' + AccountRoutes.REGISTER;
+  private static readonly LOGIN = 'login';
+  private static readonly REGISTER = 'register';
+
+  public static path = {
+    login: AccountRoutes.LOGIN,
+    register: AccountRoutes.REGISTER
+  };
+
+  public static fullPath(key: string) {
+    return BasicLayoutRoutes.path.accountModule + this.path[key];
+  }
 }
+

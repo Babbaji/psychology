@@ -6,11 +6,11 @@ import {AccountRegisterComponent} from './account-register.component';
 
 const routes: Routes = [
   {
-    path: AccountRoutes.LOGIN,
+    path: AccountRoutes.path.login,
     component: AccountLoginComponent
   },
   {
-    path: AccountRoutes.REGISTER,
+    path: AccountRoutes.path.register,
     component: AccountRegisterComponent
   }];
 
